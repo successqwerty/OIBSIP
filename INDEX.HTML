@@ -12,6 +12,7 @@
       background: linear-gradient(120deg, #ff78ac 0%, #a8d5e3 100%);
       color: #22223b;
     }
+
     header {
       background: #232946;
       color: #fff;
@@ -19,6 +20,7 @@
       text-align: center;
       box-shadow: 0 2px 12px rgba(35,41,70,0.08);
     }
+
     .main-name {
       display: inline-block;
       position: relative;
@@ -28,6 +30,7 @@
       transition: color 0.3s;
       margin: 0;
     }
+
     .main-name::before,
     .main-name::after {
       content: '';
@@ -40,28 +43,34 @@
       transform: scaleX(0);
       transition: transform 0.4s cubic-bezier(.77,0,.18,1);
     }
+
     .main-name::before {
       top: -10px;
       transform-origin: left;
     }
+
     .main-name::after {
       bottom: -10px;
       transform-origin: right;
     }
+
     .main-name:hover,
     .main-name:focus {
       color: #ff78ac;
       outline: none;
     }
+
     .main-name:hover::before,
     .main-name:hover::after,
     .main-name:focus::before,
     .main-name:focus::after {
       transform: scaleX(1);
     }
+
     nav {
       margin-top: 12px;
     }
+
     nav a {
       color: #f4faff;
       text-decoration: none;
@@ -70,9 +79,25 @@
       font-size: 1.1em;
       transition: color 0.2s;
     }
+
     nav a:hover {
       color: #ff78ac;
     }
+
+    .profile-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border: 4px solid #ff78ac;
+      border-radius: 12px; /* Square with slightly rounded corners */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
     section {
       max-width: 900px;
       margin: 38px auto;
@@ -81,6 +106,7 @@
       box-shadow: 0 2px 14px rgba(60,60,100,0.09);
       padding: 32px 36px;
     }
+
     h2 {
       color: #232946;
       margin-top: 0;
@@ -88,6 +114,7 @@
       display: inline-block;
       padding-bottom: 6px;
     }
+
     h2::after {
       content: '';
       display: block;
@@ -99,11 +126,13 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .flex-row {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
     }
+
     .block {
       flex: 1 1 250px;
       border-radius: 12px;
@@ -113,18 +142,23 @@
       background: #a8d5e3;
       color: #232946;
     }
+
     .block.skills {
       background: linear-gradient(120deg, #f2f0ea 60%, #ff78ac 100%);
+      color: #232946;
     }
+
     .block.interests {
       background: linear-gradient(120deg, #e2f7fa 60%, #a8d5e3 100%);
       color: #22223b;
     }
+
     .projects {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
     }
+
     .project-card {
       flex: 1 1 250px;
       background: #f2f0ea;
@@ -133,14 +167,17 @@
       box-shadow: 0 1px 6px rgba(79,70,229,0.10);
       transition: transform 0.2s;
     }
+
     .project-card:hover {
       transform: translateY(-4px) scale(1.03);
       background: #ff78ac2c;
     }
+
     .contact-info {
       margin-top: 10px;
       font-size: 1.1em;
     }
+
     .social-links a {
       margin-right: 18px;
       color: #232946;
@@ -148,33 +185,17 @@
       font-size: 1.3em;
       transition: color 0.2s;
     }
+
     .social-links a:hover {
       color: #fc0484ea;
     }
-    .about-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-     .profile-pic {
-  max-width: 150px;
-  border-radius: 12px; 
-  border: 4px solid #ff78ac;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
     @media (max-width: 700px) {
       section {
         padding: 18px 8px;
       }
-      .flex-row, .projects, .about-content {
+      .flex-row, .projects {
         flex-direction: column;
-        text-align: center;
-      }
-      .profile-pic {
-        margin: 0 auto;
       }
     }
   </style>
@@ -191,17 +212,19 @@
     </nav>
   </header>
 
+  <div class="profile-container">
+    <img src="me.jpg" alt="Balla Gayathri" class="profile-pic" />
+  </div>
+
   <section id="about">
     <h2>About Me</h2>
-    <div class="about-content">
-      <p>
-        Hello! I'm <strong>BALLA GAYATHRI</strong>, a passionate web developer with a love for creating beautiful and functional digital experiences. With a background in computer science and a keen eye for design, I enjoy solving complex problems and bringing ideas to life through code. My interests include frontend development and exploring new technologies.
-        My short term goal is to become a great software engineer and long term goal is to build a school and become chair person to my school.
-      </p>
-      <img src="me.jpg" alt="Balla Gayathri" class="profile-pic" />
-    </div>
+    <p>
+      Hello! I'm <strong>BALLA GAYATHRI</strong>, a passionate web developer with a love for creating beautiful and functional digital experiences. With a background in computer science and a keen eye for design, I enjoy solving complex problems and bringing ideas to life through code. My interests include frontend development and exploring new technologies.  
+      My short-term goal is to become a great software engineer, and my long-term goal is to build a school and become the chairperson of that school.
+    </p>
   </section>
 
+ 
   <section class="flex-row">
     <div class="block skills" id="skills">
       <h2>Skills</h2>
@@ -222,18 +245,22 @@
     </div>
   </section>
 
+  
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
       <div class="project-card">
         <h3>RAILWAY GO</h3>
-        <p>🔍 The Problem: Large railway stations can be confusing and overwhelming — especially for elderly passengers, differently-abled individuals, or first-time travelers.
-        💡 Our Solution:
-        ✅ Dynamic step-by-step directions from platforms to 16 key destinations (exits, toilets, reservation center, etc.)
-        ✅ Four access modes: stairs, lifts, escalators, and ramps
-        ✅ Works offline using a custom interactive SVG map
-        ✅ Simple dropdown selection to highlight the correct path
-        ✅ Multi-language instructions: English, Telugu, and Hindi</p>
+        <p>
+          🔍 The Problem:  
+          Large railway stations can be confusing and overwhelming — especially for elderly passengers, differently-abled individuals, or first-time travelers.  
+          💡 Our Solution:  
+          ✅ Dynamic step-by-step directions from platforms to 16 key destinations (exits, toilets, reservation center, etc.)  
+          ✅ Four access modes: stairs, lifts, escalators, and ramps  
+          ✅ Works offline using a custom interactive SVG map  
+          ✅ Simple dropdown selection to highlight the correct path  
+          ✅ Multi-language instructions: English, Telugu, and Hindi
+        </p>
         <a href="https://lnkd.in/gTC8CdFW" style="text-decoration: none;">View Project</a>
       </div>
     </div>
@@ -243,10 +270,10 @@
     <h2>Contact Information</h2>
     <div class="contact-info">
       Email: <a href="mailto:gayathriballa108@gmail.com" style="text-decoration: none;">gayathriballa108@gmail.com</a>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/gayathri-balla-1397a3324/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/successqwerty" target="_blank">GitHub</a>
-      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/gayathri-balla-1397a3324/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/successqwerty" target="_blank">GitHub</a>
     </div>
   </section>
 </body>
